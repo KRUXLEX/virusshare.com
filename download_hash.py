@@ -9,8 +9,6 @@ import sys
 
 URL = 'https://virusshare.com/hashes/VirusShare_00'
 
-
-[docs]
 def run(path: str, quiet=False) -> None:
     """
     Downloads all available hash files to a given path.
