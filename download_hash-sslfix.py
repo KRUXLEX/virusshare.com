@@ -16,7 +16,7 @@ from requests import adapters
 import ssl
 from urllib3 import poolmanager
 
-URL = 'https://virusshare.com/hashes/VirusShare_00'
+URL = 'https://virusshare.com/hashfiles/VirusShare_00'
 
 class TLSAdapter(adapters.HTTPAdapter):
 
@@ -55,7 +55,7 @@ def run(path, quiet=False):
                     )
         if not quiet:
             p = progressbar.ProgressBar(maxval=max_num)
-        p.start()
+            p.start()
         for i in range(max_num):
             filename = str(i).zfill(3) + '.md5'
             if os.path.exists(os.path.join(path, filename)):
